@@ -23,7 +23,10 @@ namespace Razor.Introduction.Tag.Helper.Web.Controllers
 
             return View(userList);
         }
-
+        public IActionResult Extended()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

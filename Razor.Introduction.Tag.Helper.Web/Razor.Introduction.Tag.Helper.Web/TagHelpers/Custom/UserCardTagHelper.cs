@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 using Razor.Introduction.Tag.Helper.Web.Models;
+using Razor.Introduction.Tag.Helper.Web.UserCards;
 
-namespace Razor.Introduction.Tag.Helper.Web.UserCards
+namespace Razor.Introduction.Tag.Helper.Web.TagHelpers.Custom
 {
     public class UserCardTagHelper : TagHelper
     {
