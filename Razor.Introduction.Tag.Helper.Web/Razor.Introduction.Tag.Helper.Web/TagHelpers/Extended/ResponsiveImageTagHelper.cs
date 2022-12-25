@@ -17,11 +17,13 @@ namespace Razor.Introduction.Tag.Helper.Web.TagHelpers.Extended
         }
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            base.Process(context, output);
 
             var img = new TagBuilder("img");
             img.Attributes.Add("class", "img-fluid");
             output.MergeAttributes(img);
+
+            base.Process(context, output);
+
         }
     }
 }

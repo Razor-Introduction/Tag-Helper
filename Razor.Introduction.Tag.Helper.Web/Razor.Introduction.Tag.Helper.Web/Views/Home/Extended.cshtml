@@ -1,18 +1,52 @@
-﻿
+﻿@model User
 @{
     ViewData["Title"] = "Extended";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <div class="container">
-    <div class="row">
+    <hr />
+    <h5> Input Tag Helper</h5>  
+    <div class="row  d-flex justify-content-center">
+        <div class="col-4">
+            <input class="form-control" asp-for="@Model.Email" type="text"/>
+        </div>
+    </div>
+    <div class="row  d-flex justify-content-center">
+        <div class="col-4 mt-5">
+            <input class="form-control" asp-for="@Model.Password" type="password"/>
+        </div>
+    </div>
+    <hr />
+    <h5> Image Tag Helper</h5>
+    <div class="row mt-5">
         <div class="col-12 d-flex justify-content-center">
-            <img src="/backgrounds/bg1.jpg"/>
+            <img class="img" src="/backgrounds/bg1.jpg" />
         </div>
         <div class="col-12 mt-5 d-flex justify-content-center">
             <!img src="/backgrounds/bg2.jpg"/>
         </div>
     </div>
-</div> 
+</div>
 
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#show_hide_password i").on('click', function (event) {
+            event.preventDefault();
+            if ($('#show_hide_password input').attr("type") == "text") {
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password i').addClass("la-eye-slash");
+                $('#show_hide_password i').removeClass("la-eye");
+            } else if ($('#show_hide_password input').attr("type") == "password") {
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password i').removeClass("la-eye-slash");
+                $('#show_hide_password i').addClass("la-eye");
+            }
+        });
+    });
+</script>

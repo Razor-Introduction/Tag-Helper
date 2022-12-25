@@ -25,7 +25,7 @@ namespace Razor.Introduction.Tag.Helper.Web.Controllers
         }
         public IActionResult Extended()
         {
-            return View();
+            return View(new User());
         }
         public IActionResult Privacy()
         {

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Razor.Introduction.Tag.Helper.Web.DatabaseContexts;
 using System.Security.Claims;
+using Razor.Introduction.Tag.Helper.Web.Models;
 
 namespace Razor.Introduction.Tag.Helper.Web.Controllers
 {
@@ -17,7 +18,7 @@ namespace Razor.Introduction.Tag.Helper.Web.Controllers
 
         public IActionResult Login()
         {
-            return View();
+            return View(new User());
         }
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
