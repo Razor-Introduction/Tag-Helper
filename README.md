@@ -30,25 +30,25 @@ Tag helper'lar geleneksel html biçiminde kullanıldığı için daha temiz ve o
 
 # Built-in Tag Helpers
 
-## Anchor Tag Helpers
+## Anchor Tag Helper
 ```html
 <a asp-controller="Student" asp-action="Index" 
 asp-route-id="@Model.Id"> StudentId: @Model.StudentId </a> >Student List</a>
 ```
 
-## Cache Tag Helpers
+## Cache Tag Helper
 ```html
  <cache enabled="true">
  Last Cached Time: @DateTime.Now
 </cache>
 ```
-## Distributed Cache Tag Helpers
+## Distributed Cache Tag Helper
 ```html
  <distributed-cache name="unique-cache-1">
  Time Inside Cache Tag Helper: @DateTime.Now
 </distributed-cache>
 ```
-## Environment Tag Helpers	
+## Environment Tag Helper
 
 ```html
  <environment names="Testing,Release">
