@@ -9474,7 +9474,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://nuget.org/api/v2/": {},
-        "https://pkgs.dev.azure.com/magiclick/BaseClassLibraries/_packaging/BCL/nuget/v3/index.json": {}
+        "https://pkgs.dev.azure.com/magiclick/BaseClassLibraries/_packaging/BCL/nuget/v3/index.json": {},
+        "https://sources/tfs/MagiClick/_packaging/MagiclickFramework/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

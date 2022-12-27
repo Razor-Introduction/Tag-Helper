@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Custom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<hr />
+<h5> User Card Tag Helper</h5>
+<br />
+@foreach (var item in Model)
+{
+
+    count++;
+    if (count == 1 || count % 5 == 1)
+    {
+
+        @Html.Raw("<div class='row row-cols-1 row-cols-md-5 g-4 d-flex justify-content-center'>")
+    }
+
+    <div class="col">
+        <user-card user="@item"></user-card>
+    </div>
+
+    if (count % 5 == 0)
+    {
+        @Html.Raw("</div>")
+    }
+}
+
+

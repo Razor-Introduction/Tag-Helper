@@ -43,7 +43,7 @@ namespace Razor.Introduction.Tag.Helper.Web.Controllers
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties());
             
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction(nameof(HomeController.Custom), nameof(HomeController).Replace("Controller",""));
         }
     }
 }

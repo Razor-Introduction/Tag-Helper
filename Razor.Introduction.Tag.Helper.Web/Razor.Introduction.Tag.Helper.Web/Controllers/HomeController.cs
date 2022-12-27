@@ -17,10 +17,13 @@ namespace Razor.Introduction.Tag.Helper.Web.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public async Task<IActionResult> Custom()
         {
             var userList = await _context.Users.ToListAsync();
-
             return View(userList);
         }
         public IActionResult Extended()

@@ -8,8 +8,9 @@ namespace Razor.Introduction.Tag.Helper.Web.UserCards
         {
             var sb = new StringBuilder();
 
-            sb.Append("<a href='#' class='card-link'>Mesaj gönder</a>");
-            sb.Append("<a href='#' class='card-link'>Profili incele</a>");
+            sb.Append("<a href='#' class='card-link' style='color:#1c8cc2;'>Send Message</a>");
+            sb.Append("<a href='#' class='card-link' style='color:#1c8cc2;'>See Profile</a>");
+           
             return sb.ToString();
         }
 
