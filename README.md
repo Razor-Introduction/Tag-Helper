@@ -30,7 +30,7 @@ Tag helper'lar geleneksel html biçiminde kullanıldığı için daha temiz ve o
 
 # Built-in Tag Helpers
 
-## Link Tag Helpers
+## Anchor Tag Helpers
 ```html
 <a asp-controller="Student" asp-action="Index" 
 asp-route-id="@Model.Id"> StudentId: @Model.StudentId </a> >Student List</a>
