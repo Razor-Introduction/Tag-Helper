@@ -1,0 +1,41 @@
+﻿@model List<User>
+@{
+    ViewData["Title"] = "AttributeBased";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = Model?.First();//add remove tag helpe
+}
+
+@addTagHelper RazorIntroduction.TagHelpers.Web.TagHelpers.AttributeBased.AspForTagHelper ,RazorIntroduction.TagHelpers.Web
+
+
+<hr />
+<h5> Asp-For Attribute</h5>
+
+<div class="container">
+    <hr />
+    <h5> Users</h5>
+    <div class="row  d-flex justify-content-center">
+        <div class="col-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th asp-for="@Model.First().Name"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
