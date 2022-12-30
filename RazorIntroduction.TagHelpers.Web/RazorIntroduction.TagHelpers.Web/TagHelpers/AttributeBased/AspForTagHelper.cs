@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.TagHelpers;
+﻿using Microsoft.AspNetCore.Mvc.Razor.TagHelpers;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System.Text.Encodings.Web;
@@ -15,7 +16,7 @@ namespace RazorIntroduction.TagHelpers.Web.TagHelpers.AttributeBased
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            output.Content.SetHtmlContent($"<b>{For.Name}</b>");
+            output.Content.SetHtmlContent(For.Name);
 
         }
     }

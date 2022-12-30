@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.EntityFrameworkCore;
 using RazorIntroduction.TagHelpers.Web.DatabaseContexts;
 using RazorIntroduction.TagHelpers.Web.Models;
+using System.Collections.Generic;
+using System;
 using System.Diagnostics;
 
 namespace RazorIntroduction.TagHelpers.Web.Controllers
@@ -34,7 +36,8 @@ namespace RazorIntroduction.TagHelpers.Web.Controllers
         public async Task<IActionResult> AttributeBased()
         {
             var userList = await _context.Users.ToListAsync();
-            return View(userList);
+            int index = new Random().Next(userList.Count);
+            return View(userList[index]);
         }
         public IActionResult Privacy()
         {

@@ -1,39 +1,66 @@
-﻿@model List<User>
+﻿@model User
 @{
     ViewData["Title"] = "AttributeBased";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var user = Model?.First();//add remove tag helpe
 }
 
-@addTagHelper RazorIntroduction.TagHelpers.Web.TagHelpers.AttributeBased.AspForTagHelper ,RazorIntroduction.TagHelpers.Web
-
-
-<hr />
-<h5> Asp-For Attribute</h5>
-
-<div class="container">
-    <hr />
-    <h5> Users</h5>
-    <div class="row  d-flex justify-content-center">
-        <div class="col-6">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th asp-for="@Model.First().Name"></th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @item.Name
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-md-9 col-lg-7 col-xl-5">
+            <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-4">
+                    <div class="d-flex text-black">
+                        <div class="flex-shrink-0">
+                            <img src="@Model.PictureUrl"
+                                 alt="Generic placeholder image" class="img-fluid"
+                                 style="width: 180px; border-radius: 10px;">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <div class="rounded-3 p-2 mb-2" style="background-color: #efefef;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="mb-1">@Model.Email <small style="font-size:10px" asp-for="Email"></small></h5>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <span style="font-size:14px" asp-for="Name"></span>: <span>@Model.Name</span>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <span style="font-size:14px" asp-for="Lastname"></span>: <span>@Model.Lastname</span><br />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-3 p-2 mb-2" style="background-color: #efefef;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6 asp-for="Description"></h6>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="mb-2 pb-1" style="color: #2b2a2a;">@Model.Description</p>
+                                    </div>
+                                </div>
+                                 </div>
+                            <div class="d-flex justify-content-start rounded-3 p-2 mb-2" style="background-color: #efefef;">
+                                <div>
+                                    <p class="small text-muted mb-1" asp-for="Posts"></p>
+                                    <p class="mb-0">@Model.Posts</p>
+                                </div>
+                                <div class="px-3">
+                                    <p class="small text-muted mb-1" asp-for="Followers"></p>
+                                    <p class="mb-0">@Model.Followers</p>
+                                </div>
+                                <div>
+                                    <p class="small text-muted mb-1" asp-for="Rating"></p>
+                                    <p class="mb-0">@Model.Rating</p>
+                                </div>
+                            </div>
+                            <div class="d-flex pt-1">
+                                <button type="button" class="btn btn-outline-primary me-1 flex-grow-1">Chat</button>
+                                <button type="button" class="btn btn-primary flex-grow-1">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

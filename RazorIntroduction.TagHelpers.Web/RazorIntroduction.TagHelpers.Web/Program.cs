@@ -58,41 +58,53 @@ static void AddUserData(WebApplication app)
             Id = new Guid(),
             Username = "user-x",
             Email = "userx@user.com",
-            Name = "user",
-            Lastname = "x",
+            Name = "User",
+            Lastname = "X",
             Password = "pass",
             PictureUrl = "/userpictures/userx.jpg",
-            Description = "Lorem Ipsum dolor sit amet😍"
+            Description = "Lorem Ipsum dolor sit amet😍",
+            Posts=45,
+            Followers = 756,
+            Rating =4.7
         },
         new User{
             Id = new Guid(),
             Username = "user-y",
             Email = "usery@user.com",
-            Name = "user",
-            Lastname = "y",
+            Name = "User",
+            Lastname = "Y",
             Password = "pass",
             PictureUrl = "/userpictures/usery.jpg",
-            Description = "Lorem Ipsum dolor sit amet 💯 "
+            Description = "Lorem Ipsum dolor sit amet 💯 ",
+            Posts=37,
+            Followers = 421,
+            Rating =3.2
         },
         new User{
             Id = new Guid(),
             Username = "user-z",
             Email = "userz@user.com",
-            Name = "user",
-            Lastname = "z",
+            Name = "User",
+            Lastname = "Z",
             Password = "pass",
             PictureUrl = "/userpictures/userz.jpg",
-            Description = "Lorem Ipsum dolor sit amet🔥 "
+            Description = "Lorem Ipsum dolor sit amet🔥 ",
+            Posts=7,
+            Followers = 363,
+            Rating =9.5
         },
          new User{
             Id = new Guid(),
             Username = "user-w",
             Email = "userw@user.com",
-            Name = "user",
-            Lastname = "w",
+            Name = "User",
+            Lastname = "W",
             Password = "pass",
             PictureUrl = "/userpictures/userw.jpg",
-            Description = "Lorem Ipsum dolor sit amet😻 "
+            Description = "Lorem Ipsum dolor sit amet😻 ",
+            Posts=12,
+            Followers = 1248,
+            Rating =5.8
         }
     };
 
