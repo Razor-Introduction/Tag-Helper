@@ -17,7 +17,6 @@ namespace RazorIntroduction.TagHelpers.Web.TagHelpers.AttributeBased
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             output.Content.SetHtmlContent(For.Name);
-
         }
     }
 }

@@ -6,6 +6,7 @@ namespace RazorIntroduction.TagHelpers.Web.TagHelpers.Custom
 {
     public class UserCardTagHelper : TagHelper
     {
+
         public User User { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
