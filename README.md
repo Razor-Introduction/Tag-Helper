@@ -21,11 +21,11 @@ Tag helper'lar geleneksel html biçiminde kullanıldığı için daha temiz ve o
 
 ```csharp
 // HTML Helpers
-@Html.ActionLink("Click", "Controller1", "CheckData", { @class="my-css-classname", data_my_attr="my-attribute"}) 
+@Html.ActionLink("Click", "Controller1", "CheckData", { @class="my-css-classname"}) 
 ```
 ```html
 //Tag Helpers
-<a asp-controller="Controller1" asp-action="CheckData" class="my-css-classname" my-attr="my-attribute">Click</a>
+<a asp-controller="Controller1" asp-action="CheckData" class="my-css-classname">Click</a>
 ```
 
 # Built-in Tag Helpers
