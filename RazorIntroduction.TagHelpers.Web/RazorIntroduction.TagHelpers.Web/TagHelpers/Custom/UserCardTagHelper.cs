@@ -4,9 +4,12 @@ using RazorIntroduction.TagHelpers.Web.UserCards;
 
 namespace RazorIntroduction.TagHelpers.Web.TagHelpers.Custom
 {
+
+    //<user-card user="@item"></user-card>
+    //[HtmlTargetElement("profile", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class UserCardTagHelper : TagHelper
     {
-
+        //[HtmlAttributeName("dataset")]
         public User User { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
