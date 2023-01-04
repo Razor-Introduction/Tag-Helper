@@ -73,7 +73,7 @@ Provide Password: <input asp-for="Password" />
 ## Label Tag Helper
 ```html
  <form asp-controller="Demo" asp-action="Register" method="post">
-<label asp-for="Email">Email Address</label>
+<label asp-for="Email"></label>
 <input asp-for="Email" /> 
 </form>
 ```
