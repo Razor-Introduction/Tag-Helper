@@ -1,8 +1,13 @@
-﻿@{
+﻿@model List<User>
+
+@{
     ViewData["Title"] = "Custom";
     Layout = "~/Views/Shared/_Layout.cshtml";
     int count = 0;
 }
+    
+@*@removeTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper RazorIntroduction.TagHelpers.Web.TagHelpers.Custom.UserCardTagHelper,RazorIntroduction.TagHelpers.Web*@
 
 <hr />
 <h5> User Card Tag Helper</h5>

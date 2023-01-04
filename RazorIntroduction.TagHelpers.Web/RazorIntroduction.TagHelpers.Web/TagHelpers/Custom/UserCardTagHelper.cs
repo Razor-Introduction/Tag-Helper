@@ -21,6 +21,8 @@ namespace RazorIntroduction.TagHelpers.Web.TagHelpers.Custom
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
+           // output.TagName = null;
+
             UserCardTemplate userCardTemplate;
 
             if (_httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
